@@ -6,7 +6,7 @@ import java.nio.file.Paths;
 import java.util.Scanner;
 
 /**
- * @author Martin Amado (carne), Ingebor Ayleen Rubio 19003
+ * @author Martin Amado 19020, Ingebor Ayleen Rubio 19003
  * @date 05/02/2020
  * Hoja de trabajo 2
  */
@@ -20,7 +20,8 @@ public class Main{
 		iCalculadora calc = new Calculadora();
 		Scanner leer2 = new Scanner(System.in);
 		
-		File datos = new File("C:\\Users\\Ingebor Rubio\\Desktop\\leer.txt");
+		//File datos = new File("C:\\Users\\Ingebor Rubio\\Desktop\\leer.txt");
+		File datos = new File("C:\\Users\\Javier Amado\\Desktop\\leer.txt");
 		Scanner leer = new Scanner(datos);
 		leer.useDelimiter("\\Z");
 		String traducir = leer.next();

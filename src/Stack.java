@@ -30,7 +30,7 @@ public class Stack<E> implements iStack<E>{
 	 * 
 	 */
 	public E pop(){
-
+		
 		return lista.remove(size()-1);
 	}
 

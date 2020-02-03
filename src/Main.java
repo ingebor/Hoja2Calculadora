@@ -15,13 +15,13 @@ public class Main{
 	
 	public static void main(String[] args) throws Exception{
 		
-		Stack stack = new Stack();
+		/*Stack stack = new Stack();
 		
 		iCalculadora calc = new Calculadora();
 		Scanner leer2 = new Scanner(System.in);
 		
 		//File datos = new File("C:\\Users\\Ingebor Rubio\\Desktop\\leer.txt");
-		File datos = new File("C:\\Users\\Javier Amado\\Desktop\\leer.txt");
+		File datos = new File("leer.txt");
 		Scanner leer = new Scanner(datos);
 		leer.useDelimiter("\\Z");
 		String traducir = leer.next();
@@ -57,7 +57,47 @@ public class Main{
 			stack.lista.add(partes[i]);
 			i++;
 		}
-		System.out.println(stack.lista);
+		System.out.println(stack.lista);*/
+
+		iCalculadora calc = new Calculadora();
+		iStack<Integer> stack = new Stack<Integer>(); //agregar generico
+
+		File archive = new File("leer.txt");
+		if(archive.exists()){
+			Scanner data = new Scanner(archive);
+			String all = data.nextLine();
+			String[] separated = all.split(" ");
+			for(int i=0; i<separated.length;i++){
+				try{
+					int a = Integer.parseInt(separated[i]);
+					stack.push(a);
+				}catch(NumberFormatException e){
+					String b = separated[i];
+					int d = stack.pop();
+					int c = stack.pop();
+					switch(b){
+						case "+":
+						stack.push(calc.sumar(c,d));
+						break;
+						case "-":
+						stack.push(calc.restar(c,d));
+						break;
+						case "*":
+						stack.push(calc.multiplicar(c,d));
+						break;
+						case "/":
+						stack.push(calc.dividir(c,d));
+						break;
+					}
+				}
+			}
+
+		}else{
+			System.out.println("No hay datos en el archivo");
+		}
+		System.out.println(stack.peek());
+
+		
 
 		
 	}

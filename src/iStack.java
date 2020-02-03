@@ -1,3 +1,8 @@
+/**
+ * @author Martin Amado (carne), Ingebor Ayleen Rubio 19003
+ * @date 05/02/2020
+ * Hoja de trabajo 2
+ */
 
 public interface iStack<E> {
 	public void push(E item);

@@ -1,3 +1,8 @@
+/**
+ * @author Martin Amado (carne), Ingebor Ayleen Rubio 19003
+ * @date 05/02/2020
+ * Hoja de trabajo 2
+ */
 
 public class Calculadora implements iCalculadora{
 	iStack stack = new Stack();

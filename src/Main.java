@@ -22,7 +22,7 @@ public class Main{
 		System.out.println("Desea realizar una operacion con lo siguiente: ");
 
 		iCalculadora calc = new Calculadora();
-		iStack<Integer> stack = new Stack<Integer>(); //agregar generico
+		iStack<Integer> stack = new Stack<Integer>(); 
 
 		File archive = new File("datos.txt");
 		if(archive.exists()){

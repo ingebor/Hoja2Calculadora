@@ -10,6 +10,7 @@ public class Stack<E> implements iStack<E>{
 	
 	protected ArrayList<E> lista;
 	
+
 	/**
 	 * Constructor
 	 */

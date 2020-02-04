@@ -24,22 +24,24 @@ public class Main{
 		iCalculadora calc = new Calculadora();
 		iStack<Integer> stack = new Stack<Integer>(); 
 
-		File archive = new File("datos.txt");
+		File archive = new File("datos.txt");//Busca el archivo llamado datos, y si existe, opera.
 		if(archive.exists()){
 			Scanner data = new Scanner(archive);
 			String all = data.nextLine();
 			System.out.println(all);
-			String[] separated = all.split(" ");
+			String[] separated = all.split(" ");//Separa el String por espacios
 			for(int i=0; i<separated.length;i++){
 				try{
 					int a = Integer.parseInt(separated[i]);
 					stack.push(a);
+					//Trata de convertir cada elemento a un entero, y si lo logra, lo mete a un stack
 				}catch(NumberFormatException e){
-					
+					//Si encuentra un elemento que no se convierte a entero, llama a los ultimos dos numeros ingresados, al igual que al simbolo ingresado
 					String b = separated[i];
 					int d = stack.pop();
 					int c = stack.pop();
 					switch(b){
+						//Llama a la funcion indicada dependiendo del simbolo que encontro
 						case "+":
 						stack.push(calc.sumar(c,d));
 						break;
@@ -59,6 +61,7 @@ public class Main{
 		}else{
 			System.out.println("No hay datos en el archivo");
 		}
+		//Una vez se termina el ciclo, se sabe que solo queda un numero: el resultado y lo muestra
 		System.out.println("Este es su resultado: "+stack.peek());
 
 		

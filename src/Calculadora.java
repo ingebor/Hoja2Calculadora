@@ -7,6 +7,9 @@
 public class Calculadora implements iCalculadora{
 	iStack stack = new Stack();
 
+	/**
+	 * 
+	 */
 	public int sumar(int operando1, int operando2){
 		int suma = operando1 + operando2;
 		return suma;

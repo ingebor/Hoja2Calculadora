@@ -20,14 +20,14 @@ public class Stack<E> implements iStack<E>{
 	}
 	
 	/**
-	 * 
+	 * pushear un elemento
 	 */
 	public void push(E item){
 		lista.add(item);
 	}
 
 	/**
-	 * 
+	 * Ver ultimo dato que entro al array
 	 */
 	public E pop(){
 		
@@ -35,7 +35,7 @@ public class Stack<E> implements iStack<E>{
 	}
 
 	/**
-	 * 
+	 * Ver el siguiente valor al que se le hara pop
 	 */
 	public E peek(){
 
@@ -43,7 +43,7 @@ public class Stack<E> implements iStack<E>{
 	}
 
 	/**
-	 * 
+	 * Ver si el stack esta vacio
 	 */
 	public boolean empty(){
 
@@ -51,7 +51,7 @@ public class Stack<E> implements iStack<E>{
 	}
 
 	/**
-	 * 
+	 * Tamaño del stack
 	 */
 	public int size(){
 

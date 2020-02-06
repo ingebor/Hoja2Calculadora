@@ -37,32 +37,42 @@ public class Main{
 				}catch(NumberFormatException e){
 					
 					String b = separated[i];
-					int d = stack.pop();
-					int c = stack.pop();
-					switch(b){
-						case "+":
-						stack.push(calc.sumar(c,d));
-						break;
-						case "-":
-						stack.push(calc.restar(c,d));
-						break;
-						case "*":
-						stack.push(calc.multiplicar(c,d));
-						break;
-						case "/":
-						stack.push(calc.dividir(c,d));
-						break;
+					if(b.equals("+") || b.equals("-")|| b.equals("/")||b.equals("*")) {
+						int d = stack.pop();
+						int c = stack.pop();
+						switch(b){
+							case "+":
+							stack.push(calc.sumar(c,d));
+							break;
+							case "-":
+							stack.push(calc.restar(c,d));
+							break;
+							case "*":
+							stack.push(calc.multiplicar(c,d));
+							break;
+							case "/":
+							stack.push(calc.dividir(c,d));
+							break;
+						}
 					}
+					else {
+						System.out.println("No ha ingresado un dato valido");
+						int resp = -111111;
+						stack.push(resp);
+					}
+						
 				}
 			}
+		}
 
-		}else{
+		else{
 			System.out.println("No hay datos en el archivo");
 		}
-		System.out.println("Este es su resultado: "+stack.peek());
-
-		
-
-		
+		if(stack.peek().equals(11111111)||stack.peek().equals(-111111)) {
+			System.out.println("Vuelva a intentarlo");
+		}
+		else 
+			System.out.println("Este es su resultado: "+stack.peek());
+	
 	}
 }

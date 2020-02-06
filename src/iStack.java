@@ -4,7 +4,7 @@
  * Hoja de trabajo 2
  */
 
-
+//Extraido de: https://uvg.instructure.com/courses/13715/pages/adt-stack-en-java?module_item_id=195245
 public interface iStack<E> {
 	
 	/**

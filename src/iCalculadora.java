@@ -5,19 +5,36 @@
  */
 
 public interface iCalculadora{
+	/**
+	 * Sumar dos numeros
+	 * @param operando1
+	 * @param operando2
+	 * @return suma
+	 */
 	public int sumar(int operando1, int operando2);
-	// pre: at least two numbers exist in stack used
-	// post: returns the sum of the numbers
 
+	/**
+	 * Restar dos numeros
+	 * @param operando1
+	 * @param operando2
+	 * @return resta
+	 */
 	public int restar(int operando1, int operando2);
-	// pre: at least two numbers exist in stack used
-	// post: returns the difference of the numbers 
-
+	
+	/**
+	 * Dividir dos numeros
+	 * @param operando1
+	 * @param operando2
+	 * @return division
+	 */
 	public int dividir(int operando1, int operando2);
-	// pre: at least two numbers exist in stack used  
-	// post: Divides both numbers 
-	// Cant divide by zero, and doesnt return decimal places
 
+	/**
+	 * Multiplicar dos numeros
+	 * @param operando1
+	 * @param operando2
+	 * @return multi
+	 */
 	public int multiplicar(int operando1, int operando2);
 	// pre: at least two numbers exist in stack used  
 	// post: multiplies both numbers

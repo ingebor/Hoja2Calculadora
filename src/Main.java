@@ -1,3 +1,9 @@
+/**
+ * @author Martin Amado 19020, Ingebor Ayleen Rubio 19003
+ * @date 05/02/2020
+ * Hoja de trabajo 2
+ */
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -5,11 +11,6 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.Scanner;
 
-/**
- * @author Martin Amado 19020, Ingebor Ayleen Rubio 19003
- * @date 05/02/2020
- * Hoja de trabajo 2
- */
 
 public class Main{
 	
